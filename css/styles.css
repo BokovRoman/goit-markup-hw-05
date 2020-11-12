@@ -31,6 +31,8 @@ ul {
 }
 
 .site-nav .link {
+  padding-top: 28px;
+  padding-bottom: 28px;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -48,6 +50,29 @@ ul {
 .site-nav .link.current {
   color: var(--accent-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item > .link {
+  position: relative;
+}
+
+.site-nav .link::after,
+.site-nav .current::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--accent-color);
+  height: 4px;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav .link:hover::after,
+.site-nav .current::after {
+  opacity: 1;
 }
 
 .logo {
@@ -212,8 +237,7 @@ footer {
 
 .header-nav {
   display: flex;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  align-items: center;
 }
 
 .header-container {
