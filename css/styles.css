@@ -71,6 +71,7 @@ ul {
 }
 
 .site-nav .link:hover::after,
+.site-nav .link:focus::after,
 .site-nav .current::after {
   opacity: 1;
 }
@@ -617,4 +618,24 @@ img {
 .header-item > .address {
   display: flex;
   align-items: center;
+}
+
+.section-list > .section-image {
+  position: relative;
+}
+
+.section-description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 27px 82px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  margin-bottom: 0;
+  background: rgba(47, 48, 58, 0.8);
 }
