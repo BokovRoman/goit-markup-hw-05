@@ -56,7 +56,6 @@ ul {
   position: relative;
 }
 
-.site-nav .link::after,
 .site-nav .current::after {
   content: "";
   display: block;
@@ -274,6 +273,8 @@ nav > .link.logo {
 }
 
 .hero-container {
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -683,7 +684,6 @@ img {
 
 .backdrop {
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
   bottom: 0;
